@@ -11,7 +11,7 @@ BLUE = (0,100,255)
 WHITE = (255,255,255)
 BACKGROUND_COLOR = BLACK
 SCREEN_SIZE = (WIDTH,HEIGHT)
-FPS = 60
+FPS = 30
 
 clock = pygame.time.Clock()
 
