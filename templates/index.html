@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PacMath - Download Aplikasi</title>
+  <!-- Link CSS dari Materialize -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <!-- Icon Material Icons -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!-- Gaya khusus untuk halaman ini -->
+  <style>
+    body {
+      background-color: #2c3e50;
+      color: #ecf0f1;
+    }
+
+    .nav-wrapper {
+      background: #34495e;
+    }
+
+    .brand-logo {
+      font-size: 1.8rem;
+      padding-left: 20px;
+    }
+
+    .card {
+      background: #2c3e50;
+      color: #ecf0f1;
+      transition: box-shadow 0.3s, transform 0.3s;
+      border-radius: 10px;
+    }
+
+    .card:hover {
+      box-shadow: 0 8px 17px rgba(0, 0, 0, 0.4);
+      transform: scale(1.05);
+    }
+
+    .card-title i {
+      margin-right: 10px;
+      color: #f39c12;
+    }
+
+    .card-action a {
+      color: #f39c12;
+    }
+
+    .container {
+      margin-top: 50px;
+    }
+
+    h3 {
+      font-family: 'Orbitron', sans-serif;
+      margin-bottom: 40px;
+    }
+
+    .description {
+      background: #34495e;
+      padding: 20px;
+      border-radius: 10px;
+      margin-bottom: 20px;
+    }
+
+    .carousel .carousel-item {
+      width: 100%;
+      height: auto;
+    }
+
+    .carousel .carousel-item img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+    }
+
+    @media screen and (max-width: 600px) {
+      .container {
+        padding: 0 10px;
+      }
+
+      .brand-logo {
+        font-size: 1.5rem;
+        padding-left: 10px;
+      }
+
+      .card {
+        margin-bottom: 20px;
+      }
+
+      .carousel .carousel-item img {
+        height: 200px;
+      }
+
+      h3 {
+        font-size: 1.5rem;
+      }
+
+      .description {
+        padding: 15px;
+      }
+
+      .card-title {
+        font-size: 1.2rem;
+      }
+    }
+
+    @media screen and (min-width: 601px) and (max-width: 992px) {
+      .container {
+        padding: 0 20px;
+      }
+
+      .brand-logo {
+        font-size: 1.6rem;
+      }
+
+      .card {
+        margin-bottom: 30px;
+      }
+
+      .carousel .carousel-item img {
+        height: 300px;
+      }
+
+      h3 {
+        font-size: 2rem;
+      }
+
+      .description {
+        padding: 18px;
+      }
+
+      .card-title {
+        font-size: 1.4rem;
+      }
+    }
+
+    @media screen and (min-width: 993px) {
+      .container {
+        padding: 0 30px;
+      }
+
+      .brand-logo {
+        font-size: 1.8rem;
+      }
+
+      .card {
+        margin-bottom: 40px;
+      }
+
+      .carousel .carousel-item img {
+        height: 400px;
+      }
+
+      h3 {
+        font-size: 2.5rem;
+      }
+
+      .description {
+        padding: 20px;
+      }
+
+      .card-title {
+        font-size: 1.6rem;
+      }
+    }
+  </style>
+  <!-- Link ke font Orbitron untuk gaya futuristik -->
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <nav>
+    <div class="nav-wrapper">
+      <a href="#" class="brand-logo">PacMath</a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <li><a href="{{ url_for('download', filename='aplikasi.zip') }}">Download Aplikasi</a></li>
+      </ul>
+    </div>
+  </nav>
+  <div class="container">
+    <h3 class="center-align">Selamat datang di PacMath - Halaman Download Aplikasi!</h3>
+    <div class="description">
+      <p>PACMATH adalah sebuah permainan edukatif yang berdasarkan pada permainan game labirin. Dalam permainan
+        ini, pengguna mengontrol PacMath dan mencoba untuk mengeliminasi semua hantu. Setiap hantu memiliki angka yang
+        tertera ditubuhnya. Pada awal permainan, PacMath harus memakan buah yang mengandung soal matematika. Kesulitan
+        soal tergantung pada level permainan. Pengguna harus menyelesaikan soal dan memakan Hantu dengan jawaban yang
+        benar. Permainan berlanjut ke level berikutnya setelah semua empat hantu dieliminasi.</p>
+      <p>Saat ini, soal-soal permainan mencakup penjumlahan, perkalian, pengurangan dan pembagian. Kesulitan
+        soal meningkat seiring dengan meningkatnya level. Permainan ini ditargetkan untuk siswa sekolah dasar.</p>
+      <!-- <p>Permainan ini diprogram dalam bahasa Python menggunakan pustaka Pygame. Untuk menjalankan program ini, pengguna
+        harus memiliki Python dan Pygame terinstal di komputer mereka.</p> -->
+    </div>
+    <div class="row">
+      <div class="col s12 m6 offset-m3">
+        <div class="card">
+          <div class="card-content">
+            <div class="carousel">
+              <a class="carousel-item" href="#one!"><img src="../static/image/1.png" alt="Screenshot 1"></a>
+              <a class="carousel-item" href="#two!"><img src="../static/image/3.png" alt="Screenshot 2"></a>
+              <a class="carousel-item" href="#three!"><img src="../static/image/2.png" alt="Screenshot 3"></a>
+            </div>
+          </div>
+          <div class="card-content">
+            <span class="card-title"><i class="material-icons">videogame_asset</i> PacMath App</span>
+          </div>
+          <div class="card-action center-align">
+            <a href="{{ url_for('download', filename='aplikasi.zip') }}">Download Sekarang</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Link JavaScript dari Materialize -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <!-- Inisialisasi Carousel -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      var elems = document.querySelectorAll('.carousel');
+      var instances = M.Carousel.init(elems, {
+        fullWidth: true,
+        indicators: true
+      });
+    });
+  </script>
+</body>
+
+</html>
